@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* main */
+  .main-container {
+    @apply flex-col h-full items-center box-border z-0;
+  }
+
+  /* Head Text */
+  .head-text {
+    @apply text-heading4-medium text-dark-1;
+  }
+
+  /* Notification */
+  .notification-card {
+    @apply flex items-center gap-2 rounded-md bg-light-1 px-7 py-4;
+  }
+
+  /* Post Modal */
+  .post-modal {
+    @apply fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-50;
+  }
+
+  /* No Result */
+  .no-result {
+    @apply text-center !text-base-regular text-dark-1;
+  }
+
+  /* User card */
+  .user-card {
+    @apply flex flex-col justify-between gap-4 max-xs:rounded-xl max-xs:bg-light-1 max-xs:p-4 xs:flex-row xs:items-center;
+  }
+
+  .user-card_avatar {
+    @apply flex flex-1 items-start justify-start gap-3 xs:items-center;
+  }
+
+  .searchbar {
+    @apply flex gap-1 rounded-lg bg-light-1 px-4 py-2;
+  }
+
+  .searchbar_input {
+    @apply border-none bg-light-1 text-base-regular text-light-4 outline-none !important;
+  }
+
+  .leftsidebar {
+    @apply sticky left-0 top-0 z-10 flex flex-col border-r-1 h-screen w-fit max-lg:w-20 justify-between overflow-auto bg-light-1 pt-3 pl-32 pr-44 max-lg:m-0 max-lg:p-0 max-lg:pl-1 max-lg:pt-2;
+  }
+
+  .leftsidebar_link {
+    @apply relative flex justify-start gap-4 rounded-3xl p-4;
+  }
+
+  .pagination {
+    @apply mt-10 flex w-full items-center justify-center gap-5;
+  }
+
+  .rightsidebar {
+    @apply sticky right-0 top-0 z-0 mr-20 flex h-screen w-7/12 bg-light-1 border-l-1 flex-col overflow-auto justify-between gap-12 px-10 pb-6 max-xl:hidden;
+  }
+
+  .rightsidebar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+
+  .rightsidebar {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+  }
+
+  .topbar {
+    @apply fixed top-0 left-0 right-0 z-10 w-full bg-light-1 border-b-1;
+  }
+}
+
+
+
+@layer utilities {
+  .css-invert {
+    @apply invert-[50%] brightness-200;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5c5c7b;
+    border-radius: 50px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
+  }
+}
+
+/* Clerk Responsive fix */
+.cl-organizationSwitcherTrigger .cl-userPreview .cl-userPreviewTextContainer {
+  @apply max-sm:hidden;
+}
+
+.cl-organizationSwitcherTrigger
+.cl-organizationPreview
+.cl-organizationPreviewTextContainer {
+  @apply max-sm:hidden;
+}
+
+/* Shadcn Component Styles */
+
+
+.no-focus {
+  @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+}
+
+/* Account Profile  */
+.account-form_image-label {
+  @apply flex h-24 w-24 items-center justify-center rounded-full bg-light-1 !important;
+}
+
+.account-form_image-input {
+  @apply cursor-pointer border-none bg-transparent outline-none file:text-black !important;
+}
+
+.account-form_input {
+  @apply border border-dark-4 bg-light-1 text-dark-1 !important;
+}
+
+/* Comment Form */
+.comment-form {
+  @apply flex items-center gap-4 border-b p-4 max-xs:flex-col !important;
+}
+
+.comment-form_btn {
+  @apply rounded-3xl bg-primary-500 hover:bg-secondary-500 px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
+}
+
+textarea{
+  resize:none;
+}
