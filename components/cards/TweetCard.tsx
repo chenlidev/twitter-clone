@@ -55,7 +55,7 @@ function TweetCard({
     };
 
     return (
-        <article className="flex flex-col max-w-full border-b-1 p-4">
+        <article className="flex max-w-full flex-col border-b-1 p-4">
             <div className="flex items-start gap-3">
                 <Link href={`/profile/${author.id}`} className='relative h-11 w-11'>
                     <Image
@@ -65,7 +65,7 @@ function TweetCard({
                         className='rounded-full '
                     />
                 </Link>
-                <div className="flex-1 flex flex-col">
+                <div className="flex flex-1 flex-col">
                     <div className="flex items-center gap-2">
                         <Link href={`/profile/${author.id}`}>
                             <h4 className='cursor-pointer text-base-semibold text-dark-1'>
@@ -133,7 +133,7 @@ function TweetCard({
                     ))}
 
                     <Link href={`/tweet/${id}`}>
-                        <p className='text-subtle-medium text-gray-1'>
+                        <p className='text-gray-1 text-subtle-medium'>
                             {comments.length} repl{comments.length > 1 ? "ies" : "y"}
                         </p>
                     </Link>
@@ -154,7 +154,7 @@ function TweetCard({
                     ))}
 
                     <Link href={`/tweet/${id}`}>
-                        <p className='text-subtle-medium text-gray-1'>
+                        <p className='text-gray-1 text-subtle-medium'>
                             {comments.length} repl{comments.length > 1 ? "ies" : "y"}
                         </p>
                     </Link>
