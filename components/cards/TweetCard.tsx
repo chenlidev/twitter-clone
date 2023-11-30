@@ -113,8 +113,6 @@ function TweetCard({
                     tweetId={JSON.stringify(id)}
                     currentUserId={currentUserId}
                     authorId={author.id}
-                    parentId={parentId}
-                    isComment={isComment}
                 />
             </div>
 
